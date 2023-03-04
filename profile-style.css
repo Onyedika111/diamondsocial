@@ -1,0 +1,495 @@
+.cover-photo {
+  position: relative;
+}
+.cover-photo .cover {
+  width: 100%;
+  height: 15rem;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.cover-photo::before {
+  content: "";
+  width: 100%;
+  height: 15rem;
+  background: black;
+  opacity: 40%;
+  position: absolute;
+  bottom: 0;
+  display: block;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.cover-photo button {
+  background: var(--color-primary);
+  height: 2.5rem;
+  width: 6rem;
+  border-radius: var(--border-radius);
+  border: 0.1rem solid var(--color-white);
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+}
+
+.cover-photo button:hover {
+  opacity: 90%;
+}
+
+.cover-photo button h5 {
+  font-size: 1rem;
+  color: var(--color-white);
+}
+
+.cover-photo .profile-picturee {
+  height: 10rem;
+  width: 10rem;
+  position: absolute;
+  bottom: -2rem;
+  left: 5rem;
+  border: 0.2rem solid var(--color-white);
+}
+
+.cover-photo .cover-name {
+  color: var(--color-white);
+  position: absolute;
+  bottom: 2rem;
+  left: 17rem;
+  text-shadow: 1rem 0.1rem 4rem black;
+}
+
+.cover-stats {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: -3rem;
+  color: var(--color-dark);
+  right: 1rem;
+}
+
+.cover-stats > div .active {
+  display: flex;
+
+  padding-bottom: 1rem;
+  align-items: center;
+  border-bottom: 1rem solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.cover-stats > div h5 small {
+  color: var(--color-gray);
+}
+
+.cover-stats .active {
+  border-bottom: 0.2rem solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.cover-stats > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* --------------------------------------PROFILE MAIN----------------------------- */
+.profile-main {
+  display: flex;
+  margin-top: 5rem;
+  width: 100%;
+  gap: 1rem;
+}
+
+.profile-profile {
+  width: 35%;
+}
+
+.profile-posts {
+  width: 65%;
+}
+
+.profile-complete {
+  background: var(--color-white);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  margin-bottom: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.profile-complete > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile-complete > div span {
+  width: 80%;
+  height: 0.3rem;
+  background: var(--color-light);
+  position: relative;
+  overflow: hidden;
+  border-radius: 3rem;
+}
+
+.profile-complete > div span  span {
+    width: 80%;
+    height: 0.3rem;
+    background: var(--color-primary);
+    z-index: 100;
+    display: block;
+    border-radius: 3rem;
+  }
+
+/* 
+.profile-complete > div span::before {
+  width: 80%;
+  height: 0.2rem;
+  background: var(--color-primary);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+} */
+
+.profile-about {
+  background: var(--color-white);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  margin-bottom: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+.profile-about > p {
+  font-size: 0.7rem;
+}
+
+.about-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 0.3rem;
+}
+
+.first {
+  margin-top: 1rem;
+}
+
+.about-info h6 {
+  margin-left: 0.6rem;
+}
+
+.about-photo {
+  background: var(--color-white);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about-photo .photo-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+.about-gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.about-gallery .gallery {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  object-fit: cover;
+  margin-bottom: 0.4rem;
+  overflow: hidden;
+  gap: 0.25rem;
+  width: 100%;
+}
+
+.about-gallery .gallery div {
+  width: 50%;
+  object-fit: cover;
+}
+
+.about-gallery .gallery img {
+  width: 100%;
+  height: 6rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+/* ---------------------------PROFILE CREATE POST--------------------- */
+
+.profile-main .create-post {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-white);
+  padding: 0.2rem var(--card-padding);
+  border-radius: var(--border-radius);
+}
+
+.profile-main .create-post input[type="text"] {
+  justify-self: start;
+  width: 100%;
+  padding-left: 1rem;
+  background: transparent;
+  color: var(--color-gray);
+  margin-right: 1rem;
+}
+
+.profile-main .create-post input[type="text"]::placeholder {
+  color: var(--color-gray);
+}
+
+.create-post button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.2rem;
+  width: 10rem;
+  height: 3rem;
+  font-size: 1rem;
+}
+
+/* -------------------------------PROFILE FEEDS------------------------- */
+
+/* -- ------------------------FEEDS---------------------------- -- */
+.profile-posts .feeds .feed {
+  background: var(--color-white);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  margin: 1rem 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.profile-posts .feed .head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-posts .head span i {
+  font-size: 1rem;
+  color: var(--color-dark);
+  padding-right: 0.2rem;
+  cursor: pointer;
+}
+.profile-posts .feed .user {
+  display: flex;
+  gap: 1rem;
+}
+
+.profile-posts .feed .photo {
+  border-radius: var(--card-border-radius);
+  overflow: hidden;
+  margin: 0.7rem 0;
+}
+
+/* ---------------POST FEED IMAGES--------------- */
+.profile-posts .photo-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-posts .photo-grid3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-posts .boxes {
+  width: 60%;
+  overflow: hidden;
+}
+
+.profile-posts .boxes2 {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+.profile-posts .boxes3 {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.profile-posts .boxes3 img:nth-child(1) {
+  margin-bottom: 1rem;
+  height: 20rem;
+  object-fit: cover;
+}
+.profile-posts .boxes3 img:nth-child(2) {
+  height: 20rem;
+  object-fit: cover;
+}
+
+.profile-posts .boxes4 {
+  width: 60%;
+  overflow: hidden;
+}
+
+.profile-posts .boxes4 img:nth-child(1) {
+  margin-bottom: 1rem;
+  height: 18.7rem;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+.profile-posts .boxes4 img:nth-child(2) {
+  height: 18.7rem;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.profile-posts .boxes5 {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.profile-posts .horizontal {
+  width: 37%;
+  overflow: hidden;
+}
+
+.profile-posts .boxes img {
+  width: 100%;
+  margin-bottom: 10px;
+  height: 12.5rem;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.profile-posts .horizontal img {
+  width: 100%;
+  height: 38.5rem;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* ---------------POST FEED IMAGES ENDS--------------- */
+
+.profile-posts .feed .action-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+  margin: 0.6rem;
+}
+
+.profile-posts .liked-by {
+  display: flex;
+}
+
+.profile-posts .liked-by span {
+  width: 1.4rem;
+  height: 1.4rem;
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--color-white);
+  margin-left: -0.6rem;
+}
+
+.profile-posts .liked-by span:first-child {
+  margin: 0;
+}
+
+.profile-posts .liked-by p {
+  margin-left: 0.5rem;
+}
+
+.cover-photo i {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  .cover-photo button {
+    display: none;
+  }
+
+  .cover-photo i {
+    height: 2.5rem;
+    display: flex;
+    width: 3rem;
+    border-radius: var(--border-radius);
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+    color: var(--color-white);
+    font-size: 1.5rem;
+  }
+
+  .cover-photo .profile-picturee {
+    top: 7rem;
+    left: 50%;
+    transform: translate(-50%);
+    height: 12rem;
+    width: 12rem;
+  }
+
+  .cover-photo .cover-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.4rem;
+    top: 21rem;
+    left: 50%;
+    transform: translate(-50%);
+    color: var(--color-dark);
+  }
+
+  .cover-photo .cover-stats {
+    
+    top: 24rem;
+    left: 50%;
+    transform: translate(-50%);
+    color: var(--color-dark);
+    right: -8rem;
+  }
+
+  .cover-photo .cover-name h1,
+  .cover-photo .cover-name p {
+    color: var(--color-dark);
+  }
+
+  .cover-photo .cover-name h1 {
+    white-space: nowrap;
+  }
+
+  .profile-main {
+    flex-direction: column;
+    margin-top: 11rem;
+  }
+
+  .profile-profile {
+    width: 100%;
+  }
+
+  .profile-posts {
+    width: 100%;
+  }
+}
